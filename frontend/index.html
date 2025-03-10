@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница - Estore Management</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <script src="./script/lib/jquery-3.6.0.min.js"></script>
+    <script src="./script/lib/jszip-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="logo-container"><a href="./index.html">Estore Management</a></div>
+        <div id="mainmenu">
+            <div>
+                <div class="item"><a>Справочники</a></div>
+                <div class="dropdown">
+                    <div class="item"><a href="./positiontype.html">Должности</a></div>
+                    <div class="item"><a href="./electroitemtype.html">Типы электроники</a></div>
+                    <div class="item"><a href="./shop.html">Магазины</a></div>
+                    <div class="item"><a href="./purchasetype.html">Типы покупки</a></div>
+                </div>
+            </div>
+            <div>
+                <div class="item"><a>Связи</a></div>
+                <div class="dropdown">
+                    <div class="item"><a href="./electroshop.html">Электротовары-магазины</a></div>
+                    <div class="item"><a href="./electroemployee.html">Типы товаров-сотрудники</a></div>                    
+                </div>
+            </div>
+            <div class="item"><a href="./electroitem.html">Электротовары</a></div>
+            <div class="item"><a href="./puchase.html">Покупки</a></div>
+            <div class="item"><a href="./employee.html">Сотрудники</a></div>
+        </div>
+    </div>
+    <div id="container">
+        <h1>Импорт ZIP архива</h1>
+        <div class="list-container">
+            <div id="file-upload-container">
+                <input type="file" id="file-upload" accept=".zip">
+                <button id="upload-btn">Загрузить .zip файл</button>
+            </div>
+        </div>
+
+        <h1>Лучшие сотрудники - количество проданных товаров за последний год (макс. 10)</h1>
+        <div class="list-container">
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>Сотрудник ID</th>
+                        <th>Колличество проданных товаров</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Дата рождения</th>
+                        <th>Должность ID</th>
+                        <th>Магазин ID</th>
+                        <th>Пол</th>
+                    </tr>
+                </thead>
+                <tbody id="item-table1-body">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Лучшие сотрудники - сумма проданных товаров за последний год (макс. 10)</h1>
+        <div class="list-container">
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>Сотрудник ID</th>
+                        <th>Сумма проданных товаров</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Дата рождения</th>
+                        <th>Должность ID</th>
+                        <th>Магазин ID</th>
+                        <th>Пол</th>
+                    </tr>
+                </thead>
+                <tbody id="item-table2-body">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Лучший младший продавец-консультант, продавший больше всех умных часов (если такой есть)</h1>
+        <div class="list-container">
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>Сотрудник ID</th>
+                        <th>Колличество проданных умных часов</th>
+                        <th>Фамилия</th>
+                        <th>Имя</th>
+                        <th>Отчество</th>
+                        <th>Дата рождения</th>
+                        <th>Магазин ID</th>
+                        <th>Пол</th>
+                    </tr>
+                </thead>
+                <tbody id="item-table3-body">
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Суммы денежных средств, полученной магазином через оплату наличными</h1>
+        <div class="list-container">
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th>Магазин ID</th>
+                        <th>Сумма денежных средств</th>
+                        <th>Название магазина</th>
+                        <th>Адрес магазина</th>
+                    </tr>
+                </thead>
+                <tbody id="item-table4-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+</html>
